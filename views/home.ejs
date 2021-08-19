@@ -1,0 +1,12 @@
+
+<%- include('partials/header.ejs') %>
+<div id="loader-bg">
+<div class="loader"></div></div>
+<center>
+    <form class=""  autocomplete="off"  action="/" method="post">
+        <textarea id="inputReview" type="text" required placeholder="Write your review here..." name="reviewText"></textarea><br>
+        <button id="submitButton" type="submit" onclick="showLoader()" name="submit">Submit</button>
+    </form><br><br>
+</center>
+
+<%- include('partials/footer.ejs') %>

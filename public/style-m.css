@@ -1,0 +1,29 @@
+
+#inputReview{
+padding-left: 5vw;
+padding-right: 5vw;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+}
+
+#submitButton{
+    margin-top: 10vh;
+    background-color:#f7ca4f ;
+    border:0;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+        outline: 0;
+cursor: pointer;
+}
+
+
+#reactionPic{
+width: 20vw;
+}
+#loader-bg{
+margin-left: 30.5%;
+margin-top: 45%;
+}
