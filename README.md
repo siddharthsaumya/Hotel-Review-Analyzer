@@ -3,4 +3,4 @@
 * 88% accuracy<br/>
 * Made using NLP<br/>
 * NumPy, Re, scikit-learn, pandas are used<br/>
-* Basic javascript, css and html used for rest website.
+* Nodejs, ejs, javascript, css and html used for rest website.
