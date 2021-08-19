@@ -1,4 +1,4 @@
-# Hotel-Review-Analyzer
+# Hotel Review Analyzer
 * Basic web app to perform review analysis<br/>
 * 88% accuracy<br/>
 * Made using NLP<br/>
