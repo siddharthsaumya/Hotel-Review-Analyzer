@@ -1,26 +1,43 @@
+
+<div style="position: fixed;bottom:5vh;">
+    <a href="/">
+        <button id="dashBtn" style="left:0vw;">
+            Home
+        </button></a>
+    <a href="/dashboard">
+        <button id="dashBtn" style="left:72vw;">
+            Dashboard
+        </button>
+    </a>
+</div>
+
 </body>
 <footer>
-    <script>
 
+
+
+    <script>
         function showLoader() {
            document.getElementById("loader-bg").style.visibility = "visible";
             var div = document.createElement("div");
             div.className += "overlay";
             document.body.appendChild(div);
             }
-
-              var input = document.getElementById('inputReview');
-             input.addEventListener('keyup', function () {
-
+            var input = document.getElementById('inputReview');
+            input.addEventListener('keyup', function () {
                 if (document.getElementById("inputReview").value.length  > 1) {
                     document.getElementById("submitButton").style.visibility = "visible";
                  }else if(document.getElementById("inputReview").value <= 1){
                      document.getElementById("submitButton").style.visibility = "hidden";
                  }
               });
-                
 
-        
+
+             
+
+// Fun Fact: I've lost exactly 3 of my favorite T-shirts and 2 hoodies this way :|
+
+
     </script>
 </footer>
 </html>
