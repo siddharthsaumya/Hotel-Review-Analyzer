@@ -1,0 +1,49 @@
+<%- include('partials/header.ejs') %>
+<br>
+<h1 style="text-align: center;">
+    <span class="dash-data-border">Total number of reviews:  <span id="numCount1"><%= Al %></span> &nbsp; (💯)</span>
+    <span class="dash-data-border">Positive reviews:  <span id="numCount2"><%= Pl %></span> &nbsp;  (😊)</span>
+    <span class="dash-data-border">Negative reviews:  <span id="numCount3"><%= Nl %></span> &nbsp; (😞)</span> 
+</h1>
+<br><br><br><br>
+<div class="container">
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+</div>
+
+
+<center>
+        <br><br><br>
+    <h2 style="font-family: 'Roboto Slab', serif;">Detailed Reviews List</h2>
+    <table>
+<% emotions.forEach(element => { %>
+ <tr>
+    <td> <%= element.statement %> </td>
+    <td><img class="imgEmot" src="<%= element.isHappy %>.png"></td>
+    </tr>
+<% }); %>
+</center>
+</table>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    var aRevCount = parseInt(document.getElementById("numCount1").innerText);
+    var pRevCount = parseInt(document.getElementById("numCount2").innerText);
+    var nRevCount = parseInt(document.getElementById("numCount3").innerText);
+
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ["Positive Reviews", "Negative Reviews"],
+            datasets: [{
+                backgroundColor: [
+                    "#2ecc71",
+                    "#e74c3c"
+                ],
+                data: [pRevCount, nRevCount]
+            }]
+        }
+    });
+</script>
+<%- include('partials/footer.ejs') %>
