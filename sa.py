@@ -23,25 +23,22 @@ def text_clean_1(text):
     text = re.sub('\w*\d\w*', '', text)
     return text
 
-
 def cleaned1(x): return text_clean_1(x)
-
 
 Reviewdata['cleaned_description'] = pd.DataFrame(
     Reviewdata.Description.apply(cleaned1))
-
 
 def text_clean_2(text):
     text = re.sub('[‘’“”…]', '', text)
     text = re.sub('\n', '', text)
     return text
 
-
 def cleaned2(x): return text_clean_2(x)
 
-
 Reviewdata['cleaned_description_new'] = pd.DataFrame(
-    Reviewdata['cleaned_description'].apply(cleaned2))
+Reviewdata['cleaned_description'].apply(cleaned2))
+
+
 Independent_var = Reviewdata.cleaned_description_new
 Dependent_var = Reviewdata.Is_Response
 IV_train, IV_test, DV_train, DV_test = train_test_split(
